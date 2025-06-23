@@ -1,38 +1,38 @@
-def get_number(prompt):
+def get_number(num):
     while True:
         try:
-            return float(input(prompt))
+            return float(input(num))
         except ValueError:
             print("Please enter a valid number.")
 
 def get_operation():
     print("\nChoose operation:")
-    print("1. Addition (+)")
-    print("2. Subtraction (-)")
-    print("3. Multiplication (*)")
-    print("4. Division (/)")
+    print(" Addition (+)")
+    print(" Subtraction (-)")
+    print(" Multiplication (*)")
+    print(" Division (/)")
     
     while True:
-        choice = input("Enter choice (1-4): ")
-        if choice in ['1', '2', '3', '4']:
+        choice = input("Enter choice ( +, -, *, / ): ")
+        if choice in ['+', '-', '*', '/']:
             return choice
         else:
-            print("Please enter 1, 2, 3, or 4.")
+            print("Please enter  +, -, *, / ")
 
 def calculate(num1, num2, operation):
-    if operation == '1':
+    if operation == '+':
         return num1 + num2, '+'
-    elif operation == '2':
+    elif operation == '-':
         return num1 - num2, '-'
-    elif operation == '3':
+    elif operation == '*':
         return num1 * num2, '*'
-    elif operation == '4':
+    elif operation == '/':
         if num2 == 0:
             return None, '/'
         return num1 / num2, '/'
 
 def main():
-    print("=== SIMPLE CALCULATOR ===")
+    print("=== CALCULATOR ===")
     
     while True:
         # Get user input
