@@ -60,7 +60,7 @@ def display_result(user_choice, computer_choice, winner):
     if winner == "tie":
         print("🤝 It's a TIE!")
     elif winner == "user":
-        print("🎉 YOU WIN!")
+        print(" YOU WIN!")
     else:
         print("💻 COMPUTER WINS!")
 
